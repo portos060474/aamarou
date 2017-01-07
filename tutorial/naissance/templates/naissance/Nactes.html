@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    <div class="container">
+
+
+    <h3> ({{ registre.registre_numbre }})  سجل الولادات /  {{ registre.registre_type }}</h3>
+<br>
+
+
+<head>
+    <style>
+        table {
+            text-align: left;
+            font-size: 14px;
+            font-family: "courier new";
+            background: #c0c0c0;
+        }
+
+        table thead tr,
+        table tfoot tr {
+            background: #c0c0c0;
+        }
+        table tbody tr {
+            background: #f0f0f0;
+        }
+
+        td, th {
+            border: 1px solid white;
+        }
+
+    </style>
+
+</head>
+
+
+<table cellspacing="1">
+
+    <thead>
+        <tr>
+            <th>Nr.d'acte </th>
+            <th>Nom de famille </th>
+            <th>Prénom</th>
+            <th>Date de naissane</th>
+            <th>Sexe</th>
+            <th>الجنس</th>
+            <th>مكان الازدياد</th>
+            <th>اسم الام</th>
+            <th>اسم الاب</th>
+            <th>الاسم الشخصي</th>
+            <th>الاسم العائلي</th>
+
+        </tr>
+ </thead>
+ {% for personne in registre.personne_set.all %}
+
+        <tr>
+            <td>{{ personne.NrActe }}-{{ personne.AnActe }}
+                <a href='/naissance/acten/{{ personne.NrActe}}-{{ personne.AnActe}}'>@
+                 </a></td>
+            <td align="left">{{ personne.Nom }}</td>
+            <td align="left">{{ personne.Prenom }}</td>
+            <td>{{ personne.Datenaissance }}</td>
+            <td>{{ personne.Sexe }}</td>
+            <td align="right">{{ personne.Sexe_ar }}</td>
+            <td align="right">{{ personne.Lieu_de_naissanceAr }}</td>
+            <td align="right">{{ personne.Nom_de_mere_ar }}</td>
+            <td align="right">{{ personne.Nom_de_pere_ar }}</td>
+            <td align="right">{{ personne.PrenomAr }}</td>
+            <td align="right">{{ personne.NomAr }} </td>
+
+        </tr>
+ {% endfor %}
+
+</table>
+
+</div>
+
+{% endblock %}

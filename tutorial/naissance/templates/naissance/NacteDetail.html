@@ -1,0 +1,225 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+         {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'NacteDetail.css' %}"/>
+
+    <div class="container">
+
+
+<fieldset>
+        <legend>Renseignements personnels / المعلومات الاساسية</legend>
+        <ol>
+
+<div class="two-col">
+    <div class="col1">
+        <label for="field1">الاسم العائلي</label>
+           <input id="textinput"  name="textinput" placeholder="{{NomAr}}" type="text" } >
+    </div>
+
+    <div class="col2">
+        <label for="field2">الاسم الشخصي</label>
+          <input id="textinput" name="textinput" placeholder="{{PrenomAr}}" class="form-control input-md" type="text">
+    </div>
+
+    <div class="col3">
+        <label for="field3">Nom de famille</label>
+        <input id="textinput" name="textinput" placeholder="{{Nom}}" type="text" } >
+    </div>
+
+    <div class="col4">
+        <label for="field4">Prénom</label>
+          <input id="textinput" name="textinput" placeholder="{{Prenom}}" type="text" } >
+    </div>
+
+</div>
+
+<br>
+<div class="two-col">
+    <div class="col1">
+        <label for="field1">رقم رسم</label>
+        <input id="textinput" name="textinput" placeholder="{{NrActe}}-{{ AnActe }}" class="form-control input-md" type="text" >
+    </div>
+
+    <div class="col2">
+        <label for="field2">تاريخ الازدياد</label>
+        <input id="textinput" name="textinput" placeholder="{{Datenaissance}}" class="form-control input-md" type="text">
+
+    </div>
+
+    <div class="col3">
+        <label for="field3">Numéro d’acte</label>
+       <input id="textinput" name="textinput" placeholder="{{NrActe}}-{{ AnActe }}" class="form-control input-md" type="text" >
+    </div>
+
+    <div class="col4">
+        <label for="field4">Date de naissance</label>
+         <input id="textinput" name="textinput" placeholder="{{Datenaissance}}" class="form-control input-md" type="text">
+    </div>
+
+</div>
+
+
+<br>
+<div class="two-col">
+    <div class="col1">
+        <label for="field1">اسم الاب</label>
+       <input id="textinput" name="textinput" placeholder="{{Nom_de_pere_ar}}" class="form-control input-md" type="text">
+    </div>
+
+    <div class="col2">
+        <label for="field2">اسم الام</label>
+            <input id="textinput" name="textinput" placeholder="{{Nom_de_mere_ar}}" class="form-control input-md" type="text">
+    </div>
+    <div class="col3">
+        <label for="field3">Non de pére</label>
+           <input id="textinput" name="textinput" placeholder="{{Nom_de_pere}}" class="form-control input-md" type="text">
+    </div>
+
+    <div class="col4">
+        <label for="field4">Nom de mére</label>
+         <input id="textinput" name="textinput" placeholder="{{Nom_de_mere}}" class="form-control input-md" type="text">
+    </div>
+
+</div>
+
+
+<br>
+<div class="two-col">
+    <div class="col1">
+        <label for="field1">مكان الازدياد </label>
+        <textarea class="form-control" id="textarea" name="textarea">{{ Lieu_de_naissanceAr }}</textarea>
+
+    </div>
+
+
+   <div class="col2">
+        <label for="field2">البينات  الهامشية </label>
+        <textarea class="form-control" id="textarea" name="textarea">{{ Mention_MarginaleAr }}</textarea>
+
+    </div>
+
+    <div class="col4">
+        <label for="field4">Lieu de naissance </label>
+         <textarea class="form-control" id="textarea" name="textarea">{{ Lieu_de_naissance }}</textarea>
+    </div>
+
+
+       <div class="col3">
+        <label for="field3">Mentions marginales </label>
+         <textarea class="form-control" id="textarea" name="textarea">{{ Mention_Marginale }}</textarea>
+    </div>
+
+</div>
+
+<br>
+<div class="two-col">
+    <div class="col1">
+        <label for="field1">الجنس</label>
+        <input id="textinput" name="textinput" placeholder="{{Sexe_ar}}" class="form-control input-md" type="text" >
+    </div>
+
+   <div class="col1">
+        <label for="field1">عنوان الاقامة</label>
+    <textarea class="form-control" id="textarea" name="textarea">{{ Adresse_ar }}</textarea>
+    </div>
+
+    <div class="col3">
+        <label for="field3">Sexe</label>
+           <input id="textinput" name="textinput" placeholder="{{Sexe}}" class="form-control input-md" type="text">
+    </div>
+
+       <div class="col4">
+        <label for="field4">Domicile </label>
+         <textarea class="form-control" id="textarea" name="textarea">{{ Adresse }}</textarea>
+
+    </div>
+
+</div>
+        </ol>
+    </fieldset>
+
+<br>
+ <br>
+
+    <!-- SECTION 2 -->
+
+<fieldset>
+        <legend> Renseignements additionnels / المعلومات الاضافية</legend>
+        <ol>
+
+
+        <div class="two-col">
+    <div class="col1">
+        <label for="field1">الجنسية</label>
+        <input id="textinput" name="textinput" placeholder="{{Nationalite_ar}} " class="form-control input-md" type="text" >
+    </div>
+
+    <div class="col2">
+        <label for="field2">رقم البطاقة الوطنية</label>
+        <input id="textinput" name="textinput" placeholder="{{CIN}}" class="form-control input-md" type="text">
+    </div>
+
+    <div class="col3">
+        <label for="field3">Nationalité </label>
+            <input id="textinput" name="textinput" placeholder="{{Nationalite}} " class="form-control input-md" type="text" >
+    </div>
+
+    <div class="col4">
+        <label for="field4">Nr.carte nationale</label>
+         <input id="textinput" name="textinput" placeholder="{{CIN}}" class="form-control input-md" type="text">
+    </div>
+</div>
+
+             <div class="two-col">
+    <div class="col1">
+        <label for="field1">المهنة</label>
+       <input id="textinput" name="textinput" placeholder="{{Profession_ar}} " class="form-control input-md" type="text" >
+    </div>
+
+    <div class="col2">
+        <label for="field2">تاريخ التسجيل</label>
+        <input id="textinput" name="textinput" placeholder="{{Datedeclaration}}" class="form-control input-md" type="text">
+    </div>
+
+    <div class="col3">
+        <label for="field3">Profession </label>
+            <input id="textinput" name="textinput" placeholder="{{Profession}} " class="form-control input-md" type="text" >
+    </div>
+
+    <div class="col4">
+        <label for="field4">Date de declaration</label>
+         <input id="textinput" name="textinput" placeholder="{{Datedeclaration}}" class="form-control input-md" type="text">
+    </div>
+</div>
+
+      <div class="two-col">
+    <div class="col1">
+        <label for="field1">الحالة المدنية</label>
+       <input id="textinput" name="textinput" placeholder="{{Etat_Civil_ar}} " class="form-control input-md" type="text" >
+    </div>
+
+    <div class="col2">
+        <label for="field2">المصرح</label>
+        <input id="textinput" name="textinput" placeholder="{{DeclarantAr}}" class="form-control input-md" type="text">
+    </div>
+
+    <div class="col3">
+        <label for="field3">Etat Civil </label>
+            <input id="textinput" name="textinput" placeholder="{{Etat_Civil}} " class="form-control input-md" type="text" >
+    </div>
+
+    <div class="col4">
+        <label for="field4">Nom de declarant</label>
+         <input id="textinput" name="textinput" placeholder="{{Declarant}}" class="form-control input-md" type="text">
+    </div>
+</div>
+        </ol>
+    </fieldset>
+
+
+
+    </div>
+
+{% endblock %}

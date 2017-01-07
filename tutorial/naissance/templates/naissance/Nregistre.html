@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    <div class="container">
+        <h4>Nombre d'actes de naissance est: {{ counter }}  </h4>
+
+        {% if all_registres %}
+            <h2>{{ registre.registre_numbre}}</h2>
+            <h3> Liste des registres de naissance / سجل الولادات:</h3>
+                <ul>
+                    {% for registre in all_registres %}
+                        <li><a href="/naissance/naissance/{{registre.id }}" > {{ registre.registre_numbre }} </a>
+                        <span>: Nombre des actes est: {{ registre.registre_total }} / masculin {{ registre.registre_mtotal }} actes / feminin  {{ registre.registre_ftotal }}</span>
+
+                        </li>
+                    {% endfor %}
+
+                </ul>
+
+        {% else %}
+             <h3> You don't have any Registre </h3>
+
+        {% endif %}
+    </div>
+
+{% endblock %}

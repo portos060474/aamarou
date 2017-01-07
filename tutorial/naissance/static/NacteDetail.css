@@ -1,0 +1,39 @@
+.two-col {
+    overflow: hidden;/* Makes this div contain its floats */
+}
+
+.two-col .col1,
+.two-col .col2,
+.two-col .col3,
+.two-col .col4 {
+    width:18%;
+}
+
+.two-col .col1 {
+    float: right;
+    text-align: right;
+    color: blue;
+
+}
+
+.two-col .col2 {
+    float: right;
+    text-align: right;
+    color: blue;
+}
+
+
+.two-col .col3 {
+    float: left;
+    border-color: #eb9316;
+
+}
+
+.two-col .col4 {
+    float: left;
+}
+
+
+.two-col label {
+    display: block;
+}
